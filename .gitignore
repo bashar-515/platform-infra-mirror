@@ -1,1 +1,5 @@
+# directories
+/ci/.terraform/
+
+# files
 /ci/terraform.tfvars
