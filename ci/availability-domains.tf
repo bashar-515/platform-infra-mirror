@@ -4,7 +4,7 @@
 # created one, you can use that one in the terraform.tfvars file.
 
 data "oci_identity_availability_domains" "ads" {
-  compartment_id = var.tenancy_ocid
+  compartment_id = oci_identity_compartment.ci.id
 }
 
 output "all-availability-domains-in-your-tenancy" {

@@ -7,9 +7,6 @@ private_key_path = "<REPLACE_ME>.pem"
 # Region
 region = "<REPLACE_ME>" # example: eu-frankfurt-1
 
-# Compartment
-compartment_ocid = "ocid1.compartment.<REPLACE_ME>"
-
 # Keys Configuration
 ssh_authorized_keys_path = "<REPLACE_ME>.pub"
 ssh_private_key_path = "<REPLACE_ME>"

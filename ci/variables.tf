@@ -21,10 +21,6 @@ variable "region" {
   description = "OCI Region"
 }
 
-variable "compartment_ocid" {
-  description = "Compartment's OCID where VCN will be created. "
-}
-
 variable "ssh_authorized_keys_path" {
   description = "Public SSH keys path to be included in the ~/.ssh/authorized_keys file for the default user on the instance."
   default     = ""
