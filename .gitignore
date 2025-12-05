@@ -3,3 +3,4 @@
 
 # files
 /ci/terraform.tfvars
+/ci/terraform.tfstate
