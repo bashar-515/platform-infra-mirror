@@ -1,5 +1,5 @@
 # directories
-/ci/.terraform/
+**/.terraform/
 
 # files
 **/.env*
