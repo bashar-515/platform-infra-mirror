@@ -4,5 +4,5 @@
 # files
 **/.env*
 
-/ci/terraform.tfvars
-/ci/terraform.tfstate*
+**/terraform.tfvars
+**/terraform.tfstate*
