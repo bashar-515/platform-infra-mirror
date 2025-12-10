@@ -7,7 +7,7 @@
 ## Bootstrap
 
 1. Create a user API token in the HCP Terraform [UI](app.terraform.io). The resulting token value should be stored in an environment variable `TFE_TOKEN`.
-2. Store your email in an environment variable `TF_VAR_email`
-3. `tofu apply` creates an organization named "Platform" and a token to access it. Replace `TFE_TOKEN` with said token, retrievable with `tofu output -raw organization_token`
+2. Store your email in an environment variable `TF_VAR_email`.
+3. `tofu apply` creates an organization named "Platform" and a token to access it. Replace `TFE_TOKEN` with said token, retrievable with `tofu output -raw organization_token`.
 
 ## CI
