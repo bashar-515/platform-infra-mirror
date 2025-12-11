@@ -11,3 +11,6 @@
 3. `tofu apply` creates an organization named "Platform" and a token to access it. Replace `TFE_TOKEN` with said token, retrievable with `tofu output -raw organization_token`.
 
 ## CI
+
+1. Create a user API token in the HCP Terraform [UI](app.terraform.io). The resulting token value should be stored in an environment variable `TF_TOKEN_app_terraform_io`.
+2. `tofu apply` uses the aforementioned token to authenticate and access the remote backend housing this repository's Tofu _state_.
