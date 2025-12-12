@@ -4,8 +4,8 @@ resource "oci_identity_compartment" "platform" {
   name = "Platform"
 }
 
-resource "oci_identity_compartment" "ci" {
+resource "oci_identity_compartment" "runner" {
   compartment_id = oci_identity_compartment.platform.id
   description = "Houses resources for my universal Codeberg CI runner."
-  name = "CI"
+  name = "Runner"
 }
