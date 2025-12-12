@@ -3,10 +3,6 @@ resource "tfe_organization" "main" {
   email = var.email
 }
 
-resource "tfe_organization_token" "main" {
-  organization = tfe_organization.main.name
-}
-
 resource "tfe_project" "ci_project" {
   name = "CI State"
   organization = tfe_organization.main.name
