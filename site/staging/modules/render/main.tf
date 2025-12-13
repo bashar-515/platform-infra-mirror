@@ -1,8 +1,8 @@
-resource "render_static_site" "site" {
+resource "render_static_site" "main" {
     branch = "main"
     build_command = "bash etc/scripts/build.sh"
-    name = "" # TODO(bashar-515): name service
-    repo_url = "https://codeberg.org/Nexus-515/site"
+    name = "platform"
+    repo_url = "https://codeberg.org/Platform-01/site"
 
     auto_deploy = true
 

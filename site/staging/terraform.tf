@@ -14,7 +14,7 @@ terraform {
   }
 
   cloud {
-    organization = "Nexus-515"
+    organization = "Platform-01"
     hostname = "app.terraform.io"
 
     workspaces {
