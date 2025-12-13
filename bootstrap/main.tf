@@ -1,5 +1,5 @@
 resource "tfe_organization" "main" {
-  name = "Platform-515"
+  name = "Nexus-515"
   email = var.email
 }
 
