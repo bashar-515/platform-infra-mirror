@@ -9,3 +9,8 @@ variable "organization_name" {
 variable "workspace_name" {
   type = string
 }
+
+variable "force_delete" {
+  type = bool
+  default = false
+}
