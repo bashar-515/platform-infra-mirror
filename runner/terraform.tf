@@ -1,4 +1,6 @@
 terraform {
+  required_version = ">= 1.10.7"
+
   required_providers {
     oci = {
       source = "oracle/oci"
@@ -7,7 +9,7 @@ terraform {
   }
 
   cloud {
-    organization = "Nexus-515"
+    organization = "Platform-01"
     hostname = "app.terraform.io"
 
     workspaces {
