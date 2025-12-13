@@ -2,7 +2,7 @@ resource "render_static_site" "main" {
     branch = "main"
     build_command = "bash etc/scripts/build.sh"
     name = "platform"
-    repo_url = "https://codeberg.org/Platform-01/site"
+    repo_url = "https://github.com/bashar-515/platform-site"
 
     auto_deploy = true
 
