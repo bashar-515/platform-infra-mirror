@@ -1,5 +1,7 @@
 data "cloudflare_zone" "main" {
-  name = "beesho.dev"
+  filter = {
+    name = "beesho.dev"
+  }
 }
 
 locals {
