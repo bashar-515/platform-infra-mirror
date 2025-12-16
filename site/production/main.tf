@@ -4,10 +4,8 @@ resource "cloudflare_pages_project" "main" {
     production_branch = "main"
 
     build_config = {
-      build_caching = true
       build_command = "bash etc/scripts/build.sh"
       destination_dir = "dist"
-      root_dir = "/"
     }
 
     deployment_configs = {
@@ -37,7 +35,6 @@ resource "cloudflare_pages_project" "main" {
 
       config = {
         owner = "bashar-515"
-        preview_deployment_setting = "none"
         production_branch = "main"
         production_deployments_enabled = true
         repo_name = "platform-site"
