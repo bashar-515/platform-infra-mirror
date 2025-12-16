@@ -68,7 +68,6 @@ locals {
   ttl = 1
   type = "CNAME"
   proxied = true
-  content = "${cloudflare_pages_project.main.subdomain}.pages.dev"
 }
 
 resource "cloudflare_dns_record" "apex" {
@@ -76,7 +75,7 @@ resource "cloudflare_dns_record" "apex" {
     ttl = local.ttl
     type = local.type
     zone_id = data.cloudflare_zone.main.id
-    content = local.content
+    content = cloudflare_pages_project.main.subdomain
 
     proxied = local.proxied
 }
@@ -86,7 +85,7 @@ resource "cloudflare_dns_record" "www" {
     ttl = local.ttl
     type = local.type
     zone_id = data.cloudflare_zone.main.id
-    content = local.content
+    content = cloudflare_pages_project.main.subdomain
 
     proxied = local.proxied
 }
