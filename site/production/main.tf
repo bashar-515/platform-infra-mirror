@@ -108,7 +108,7 @@ resource "cloudflare_ruleset" "main" {
           preserve_query_string = true
 
           target_url = {
-            value = "https://${var.apex_domain_name}$${http.request.uri.path}"
+            expression = "concat(\"https://${var.apex_domain_name}\", http.request.uri.path)"
           }
         }
       }
