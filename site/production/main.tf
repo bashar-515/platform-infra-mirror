@@ -90,22 +90,28 @@ resource "cloudflare_dns_record" "www" {
     proxied = local.proxied
 }
 
-# resource "cloudflare_ruleset" "main" {
-#   zone_id = data.cloudflare_zone.main.id
-#
-#   kind = "zone"
-#   name = "redirect"
-#   phase = "http_request_dynamic_redirect"
-#
-#   rules = [
-#     {
-#       action = "redirect"
-#       expression = "(http.host eq \"${local.www_domain_name}\")"
-#
-#       action_parameters {
-#         status_code = 301
-#         destination_url = "https://${var.apex_domain_name}${http.request.uri.path}"
-#       }
-#     }
-#   ]
-# }
+resource "cloudflare_ruleset" "main" {
+  zone_id = data.cloudflare_zone.main.id
+
+  kind = "zone"
+  name = "redirect"
+  phase = "http_request_dynamic_redirect"
+
+  rules = [
+    {
+      action = "redirect"
+      expression = "(http.host eq \"${local.www_domain_name}\")"
+
+      action_parameters = {
+        from_value = {
+          status_code = 301
+          preserve_query_string = true
+
+          target_url = {
+            value = "https://${var.apex_domain_name}$${http.request.uri.path}"
+          }
+        }
+      }
+    }
+  ]
+}
