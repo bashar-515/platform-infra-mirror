@@ -5,9 +5,9 @@ data "cloudflare_zone" "main" {
 }
 
 locals {
-  ttl = 86400
+  ttl = 1
   type = "CNAME"
-  proxied = false
+  proxied = true
 }
 
 resource "cloudflare_dns_record" "apex" {
