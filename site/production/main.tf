@@ -35,6 +35,12 @@ resource "cloudflare_pages_project" "main" {
 
       config = {
         owner = "bashar-515"
+
+        path_includes = [
+          "src/**",
+          "etc/scripts/build.sh",
+        ]
+
         production_branch = "main"
         production_deployments_enabled = true
         repo_name = "platform-site"
