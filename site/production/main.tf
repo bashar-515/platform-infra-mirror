@@ -20,7 +20,7 @@ resource "cloudflare_pages_project" "main" {
 
           CYCAS_URL = {
             type = "plain_text"
-            value = "https://cycas.com"
+            value = "https://cycas.me"
           }
         }
       }
